@@ -12,17 +12,23 @@ class Animal(object):
 		print "Health: " + str(self.health)
 
 class Dog(Animal):
+	def __init__(self, name):
+		super(Dog, self).__init__(name, 150)
 	def pet(self):
 		self.health += 5
 
 class Dragon(Animal):
-	def fly(self):
+	def __init__(self, name):
+		super(Dragon, self).__init__(name, 170)
+	def fly(self):(
 		self.health -= 10
 	def disaplyHealth(self):
 		self.displayHealth()
 		print "I am a Dragon"
 
 class Snake(Animal):
+	def __init__(self, name):
+		super(Snake, self).__init__(name, 20)
 	def slither(self):
 		self.health -= 1
 	def eat(self):
